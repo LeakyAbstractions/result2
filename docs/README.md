@@ -16,7 +16,38 @@ If you like `Optional` but feel that it sometimes falls too short, you'll love `
 
 The best way to think of _Result_ is as a super-powered version of _Optional_. The only difference is that whereas _Optional_ may contain a successful value or express the absence of a value, _Result_ contains either a successful value or a failure value that explains what went wrong.
 
-`Result` objects have methods equivalent to those in `Optional`, plus a few more to handle failure values. \| Optional \| Result \| \|-------------------------\|-------------------------\| \| \`isPresent\` \| \`isSuccess\` \| \| \`isEmpty\` \| \`isFailure\` \| \| \`get\` \| \| \| \`orElse\` \| \`orElse\` \| \| \`orElseGet\` \| \`orElseMap\` \| \| \`orElseThrow\` \| \`orElseThrow\` \| \| \`orElseThrow\(Supplier\)\` \| \`orElseThrow\(Function\)\` \| \| \| \`getFailureOrElseThrow\` \| \| \| \`optional\` \| \| \| \`optionalFailure\` \| \| \`stream\` \| \`stream\` \| \| \| \`streamFailure\` \| \| \`ifPresent\` \| \`ifSuccess\` \| \| \| \`ifFailure\` \| \| \`ifPresentOrElse\` \| \`ifSuccessOrElse\` \| \| \`filter\` \| \`filter\` \| \| \`map\` \| \`mapSuccess\` \| \| \| \`mapFailure\` \| \| \| \`map\` \| \| \`flatMap\` \| \`flatMapSuccess\` \| \| \`or\` \| \`flatMapFailure\` \| \| \| \`flatMap\` \|
+{% tabs %}
+{% tab title="Result vs Optional" %}
+ `Result` objects have methods equivalent to those in `Optional`, plus a few more to handle failure values.
+{% endtab %}
+
+{% tab title="Methods" %}
+| Optional | Result |
+| :--- | :--- |
+| `isPresent` | `isSuccess` |
+| `isEmpty` | `isFailure` |
+| `get` |  |
+| `orElse` | `orElse` |
+| `orElseGet` | `orElseMap` |
+| `orElseThrow` | `orElseThrow` |
+| `orElseThrow(Supplier)` | `orElseThrow(Function)` |
+|  | `getFailureOrElseThrow` |
+|  | `optional` |
+|  | `optionalFailure` |
+| `stream` | `stream` |
+|  | `streamFailure` |
+| `ifPresent` | `ifSuccess` |
+|  | `ifFailure` |
+| `ifPresentOrElse` | `ifSuccessOrElse` |
+| `filter` | `filter` |
+| `map` | `mapSuccess` |
+|  | `mapFailure` |
+|  | `map` |
+| `flatMap` | `flatMapSuccess` |
+| `or` | `flatMapFailure` |
+|  | `flatMap` |
+{% endtab %}
+{% endtabs %}
 
 ### Result Library in a Nutshell
 

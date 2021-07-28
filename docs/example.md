@@ -2,21 +2,21 @@
 title: My example
 description: My description
 ---
+
 # Example
 
 Example
 
-> page title: {{ page.title }}
-> ---
-> page description: {{ page.description }}
+> ## page title: 
+>
+> page description:
 
 * red
 * green
 * blue
-
-1. one
-2. two
-3. three
+* one
+* two
+* three
 
 {% hint style="info" %}
 hint
@@ -97,7 +97,7 @@ description
 Response description
 {% endapi-method-response-example-description %}
 
-```
+```text
 response 1
 ```
 {% endapi-method-response-example %}
@@ -107,7 +107,7 @@ response 1
 Response description
 {% endapi-method-response-example-description %}
 
-```
+```text
 response 2
 ```
 {% endapi-method-response-example %}
