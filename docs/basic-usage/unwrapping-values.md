@@ -1,7 +1,5 @@
 # Unwrapping Values
 
-
-
 The \[`Optional::orElse`\]\([https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Optional.html\#orElse\(T](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Optional.html#orElse%28T)\)\) method is used to retrieve the value wrapped inside an `Optional` instance, or a _default value_ in case the optional is empty.
 
 Similarly, you can use \[`orElse()`\]\[OR_ELSE\] to obtain the success value held by a \_Result_ object; or a _default success value_ in case the result is failed.
