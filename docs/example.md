@@ -1,8 +1,14 @@
+---
+title: My example
+description: My description
+---
 # Example
 
 Example
 
-> quote
+> page title: {{ page.title }}
+> ---
+> page description: {{ page.description }}
 
 * red
 * green
