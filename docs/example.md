@@ -9,18 +9,17 @@ Example
 
 image 1 start
 
-![](.gitbook/assets/result-banner-centered.png)
+![](.gitbook/assets/result-banner-centered%20%281%29.png)
 
 image 1 end
 
-
-> ## page title: 
+> ## page title:
 >
 > page description:
 
 image 2 start
 
-![](docs/result-banner-centered.png)
+![](https://github.com/LeakyAbstractions/result/tree/b0550d8da3bd207bd1b0bd3a0426b013d3356c7a/docs/docs/result-banner-centered.png)
 
 image 2 end
 
