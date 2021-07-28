@@ -20,5 +20,7 @@ dependencies {
 }
 ```
 
-For more information on when to use _api_ and _implementation_, read the [Gradle documentation on API and implementation separation](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation).
+{% hint style="info" %}
+For more information on when to use `api` and `implementation`, read the [Gradle documentation on API and implementation separation](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation).
+{% endhint %}
 
