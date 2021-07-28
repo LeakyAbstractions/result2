@@ -7,9 +7,22 @@ description: My description
 
 Example
 
+image 1 start
+
+![](.gitbook/assets/result-banner-centered.png)
+
+image 1 end
+
+
 > ## page title: 
 >
 > page description:
+
+image 2 start
+
+![](docs/result-banner-centered.png)
+
+image 2 end
 
 * red
 * green
