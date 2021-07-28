@@ -2,7 +2,7 @@
 
 * [Initial page](README.md)
 * [Result Library for Java](index.md)
-* [How to Contribute](contributing.md)
-* [Where to Get Help](support.md)
-* [Code of Conduct](code_of_conduct.md)
+* [How to Contribute](CONTRIBUTING.md)
+* [Where to Get Help](SUPPORT.md)
+* [Code of Conduct](CODE_OF_CONDUCT.md)
 
