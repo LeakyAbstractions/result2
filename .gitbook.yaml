@@ -1,9 +1,10 @@
 root: docs
 
 ​structure:  
-    readme: example.md  
+    readme: example.md
     summary: SUMMARY.md​
     
 redirects:  
     help: ./support.md
+    coc: ./code-of-conduct.md
     javadoc: https://dev.leakyabstractions.com/result/javadoc/
