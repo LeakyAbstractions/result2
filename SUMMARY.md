@@ -1,8 +1,25 @@
 # Table of contents
 
 * [Result Library for Java](README.md)
-* [Adding Result to Your Build](adding-result-to-your-build.md)
-* [How to Contribute](CONTRIBUTING.md)
-* [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md)
+
+## Getting Started
+
+* [Adding Result to Your Build](getting-started/adding-result-to-your-build.md)
+* [Creating Result Objects](getting-started/creating-result-objects.md)
+
+## Basic Usage
+
+* [Conditional Actions](basic-usage/conditional-actions.md)
+* [Unwrapping Values](basic-usage/unwrapping-values.md)
+
+## Advanced Usage
+
+* [Filtering Success Values](advanced-usage/filtering-success-values.md)
+* [Transforming Values](advanced-usage/transforming-values.md)
+
+---
+
+* [Code of Conduct](code_of_conduct.md)
+* [How to Contribute](contributing.md)
 * [Leaky Abstractions](https://leakyabstractions.com)
 
