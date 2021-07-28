@@ -31,7 +31,19 @@ image 2 end
 * three
 
 {% hint style="info" %}
-hint
+info
+{% endhint %}
+
+{% hint style="warning" %}
+warning
+{% endhint %}
+
+{% hint style="danger" %}
+danger
+{% endhint %}
+
+{% hint style="success" %}
+success
 {% endhint %}
 
 * [ ] Task1
