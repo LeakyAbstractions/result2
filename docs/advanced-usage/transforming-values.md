@@ -16,7 +16,7 @@ void should_return_string_length() {
 }
 ```
 
-In this example, we wrap a string inside a _Result_ object and use its \[`mapSuccess()`\]\[MAP_SUCCESS\] method to manipulate it \(here we calculate its length\). Note that we can specify the action as a method reference, or a a lambda. In any case, the result of this action gets wrapped inside a new \_Result_ object. And then we call the appropriate method on the returned result to retrieve its value.
+In this example, we wrap a string inside a _Result_ object and use its \[`mapSuccess()`\]\[MAP_SUCCESS\] method to manipulate it \(here we calculate its length\). Note that we can specify the action as a method reference, or a lambda. In any case, the result of this action gets wrapped inside a new \_Result_ object. And then we call the appropriate method on the returned result to retrieve its value.
 
 There is another \[`map()`\]\[MAP\] method to transform either success/failure value at once:
 

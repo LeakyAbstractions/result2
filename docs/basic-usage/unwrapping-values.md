@@ -1,8 +1,10 @@
 # Unwrapping Values
 
-The \[`Optional::orElse`\]\([https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Optional.html\#orElse\(T](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Optional.html#orElse%28T)\)\) method is used to retrieve the value wrapped inside an `Optional` instance, or a _default value_ in case the optional is empty.
+The method [`Optional::orElse`](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Optional.html#orElse%28T%29)  is used to retrieve the value wrapped inside an `Optional` instance, or a _default value_ in case the optional is empty.
 
-Similarly, you can use \[`orElse()`\]\[OR_ELSE\] to obtain the success value held by a \_Result_ object; or a _default success value_ in case the result is failed.
+## Success Value
+
+Similarly, you can use `orElse` to obtain the success value held by a _Result_ object, or a default success value in case the result is failed.
 
 ```java
 @Test
@@ -26,7 +28,7 @@ void should_return_the_default_value() {
 }
 ```
 
-The \[`orElseMap()`\]\[OR_ELSE\_MAP\] method is similar to `orElse`. However, instead of taking a value to return if the \_Result_ object is failed, it takes a mapping function, which would be applied to the failure value to produce an alternative success value:
+The `orElseMap` _method is similar to `orElse`._ However, instead of taking a value to return if the Result object is failed, it takes a mapping function, which would be applied to the failure value to produce an alternative success value:
 
 ```java
 @Test
@@ -40,9 +42,9 @@ void should_map_the_failure_value() {
 }
 ```
 
-The \[`orElseThrow()`\]\[OR\_ELSE\_THROW\] methods follow from `orElse` and `orElseMap` and add a new approach for handling a failed result.
+The `orElseThrow` methods follow from `orElse` and `orElseMap` and add a new approach for handling a failed result.
 
-Instead of returning a default value, they throw an exception. If you \[provide a mapping function\]\[OR_ELSE\_THROW\_WITH\_MAPPER\] you can transform the failure value to the appropriate exception to be thrown. If you don't, then \[\_NoSuchElementException_\]\([https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/NoSuchElementException.html](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/NoSuchElementException.html)\) will be thrown.
+Instead of returning a default value, they throw an exception. If you provide a mapping function, you can transform the failure value to the appropriate exception to be thrown. If you don't, then [NoSuchElementException](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/NoSuchElementException.html) will be thrown.
 
 ```java
 @Test
@@ -66,7 +68,9 @@ void should_return_success_value() {
 }
 ```
 
-Method \[`getFailureOrElseThrow()`\]\[GET\_FAILURE\_OR\_ELSE\_THROW\] is the counterpart of `orElseThrow`; it will return the failure value unless the result is successful:
+## Failure Value
+
+The method `getFailureOrElseThrow` is the counterpart of `orElseThrow`; it will return the failure value unless the result is successful:
 
 ```java
 @Test

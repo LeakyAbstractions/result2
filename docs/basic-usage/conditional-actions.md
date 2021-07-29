@@ -11,14 +11,14 @@ try {
 }
 ```
 
-Let's now look at how the above code could be refactored if method `foobar` returned a _Result_ object instead of throwing an exception:
+Let's now look at how the above code could be refactored if the method `foobar` returned a _Result_ object instead of throwing an exception:
 
 ```java
 final Result<String, SomeFailure> result = foobar();
 result.ifSuccessOrElse(this::commit, this::rollback);
 ```
 
-The first action passed to \[`ifSuccessOrElse()`\]\[IF\_SUCCESS\_OR\_ELSE\] will be performed if `foobar` succeeded; otherwise the second one will.
+The first action passed to `ifSuccessOrElse` will be performed if `foobar` succeeded; otherwise, the second one will.
 
 The above example is not only shorter but also faster. We can make it even shorter by chaining methods in typical functional programming style:
 
@@ -26,7 +26,7 @@ The above example is not only shorter but also faster. We can make it even short
 foobar().ifSuccessOrElse(this::commit, this::rollback);
 ```
 
-There are other methods \[`ifSuccess()`\]\[IF\_SUCCESS\] and \[`ifFailure()`\]\[IF\_FAILURE\] to handle either one of the success/ failure cases only:
+There are other methods `ifSuccess` and `ifFailure` to handle either one of the success/ failure cases only:
 
 ```java
 foobar(123)

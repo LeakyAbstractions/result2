@@ -2,13 +2,8 @@
 
 We can run an inline test on our wrapped success value with the \[`filter()`\]\[FILTER\] method. It takes a predicate and a mapping function as arguments and returns a _Result_ object:
 
-* If it is a failed result, or it is a successful result whose success value passes testing by the predicate then the
-
-  _Result_ is returned as-is.
-
-* If the predicate returns `false` then the mapping function will be applied to the success value to produce a failure
-
-  value that will be wrapped in a new failed result.
+* If it is a failed result, or it is a successful result whose success value passes testing by the predicate then the _Result_ is returned as-is.
+* If the predicate returns `false` then the mapping function will be applied to the success value to produce a failure value that will be wrapped in a new failed result.
 
 ```java
 @Test

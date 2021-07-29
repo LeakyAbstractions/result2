@@ -2,7 +2,9 @@
 
 There are several ways of creating _Result_ objects.
 
-To create a successful result, we simply need to use static method \[`Results.success()`\]\[NEW\_SUCCESS\]:
+## Successful Results
+
+To create a successful result, we simply need to use the static method `Results.success`:
 
 ```java
 @Test
@@ -14,9 +16,11 @@ void should_be_success() {
 }
 ```
 
-Note that we can use methods \[`isSuccess()`\]\[IS\_SUCCESS\] or \[`isFailure()`\]\[IS\_FAILURE\] to check if the result was successful or not.
+Note that we can use methods `isSuccess` or `isFailure` to check if the result was successful or not.
 
-On the other hand, if we want to create a failed result, we can use static method \[`Results.failure()`\]\[NEW\_FAILURE\]:
+## Failed Results
+
+On the other hand, if we want to create a failed result, we can use the static method `Results.failure`:
 
 ```java
 @Test
@@ -28,7 +32,9 @@ void should_not_be_success() {
 }
 ```
 
-We can also use static method \[`Results.ofOptional()`\]\[OF\_OPTIONAL\] to create results that depend on an optional value:
+## Optional to Result
+
+We can also use the static method `Results.ofOptional` to create results that depend on an optional value:
 
 ```java
 @Test
@@ -42,7 +48,9 @@ void should_be_failure() {
 }
 ```
 
-And sometimes it might come in handy to encapsulate actual thrown exceptions inside a result object via static method \[`Results.wrap()`\]\[WRAP\]:
+## Wrapping Exceptions
+
+Sometimes it might come in handy to encapsulate the actual thrown exceptions inside a result object via the static method `Results.wrap`:
 
 ```java
 @Test
@@ -56,7 +64,9 @@ void should_be_failure_too() {
 }
 ```
 
-There's also a way to encapsulate expensive operations that can be entirely omitted \(as an optimization\) if there's no actual need to examine the result. To create a _lazy_ result we need to use static method \[`Results.lazy()`\]\[LAZY\]:
+## Lazy results
+
+There's also a way to encapsulate expensive operations that can be entirely omitted \(as an optimization\) if there's no actual need to examine the result. To create a _lazy_ result we need to use the static method `Results.lazy`:
 
 ```java
     Result<String, Void> expensiveCalculation(AtomicLong timesExecuted) {
