@@ -2,6 +2,7 @@
 
 * [Result Library for Java](README.md)
 * [Example](example.md)
+* [Index](index.md)
 
 ## Getting Started
 
