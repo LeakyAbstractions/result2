@@ -2,7 +2,6 @@
 
 * [Result Library for Java](README.md)
 * [Example](example.md)
-* [Index](index.md)
 
 ## Getting Started
 
@@ -19,7 +18,7 @@
 * [Filtering Success Values](advanced-usage/filtering-success-values.md)
 * [Transforming Values](advanced-usage/transforming-values.md)
 
----
+***
 
 * [Where to Get Help](support.md)
 * [How to Contribute](contributing.md)
@@ -27,4 +26,4 @@
 * [License](license.md)
 * [Author](author.md)
 * [Releases](releases.md)
-
+* [Page 1](page-1.md)

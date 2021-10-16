@@ -1,5 +1,4 @@
 ---
-title: My example
 description: My description
 ---
 
@@ -9,11 +8,11 @@ Example
 
 image 1 start
 
-![](.gitbook/assets/result-banner-centered%20%281%29.png)
+![](<.gitbook/assets/result-banner-centered (1) (1).png>)
 
 image 1 end
 
-> ## page title:
+> ### page title:
 >
 > page description:
 
@@ -51,7 +50,7 @@ success
 * [x] Task 3
 * [ ] Task 4
 
-```text
+```
 code block
 ```
 
@@ -69,73 +68,44 @@ foobar
 {% endtab %}
 {% endtabs %}
 
-{% api-method method="get" host="url" path="" %}
-{% api-method-summary %}
-method
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="url" method="get" summary="method" %}
+{% swagger-description %}
 Method description
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="param2" type="object" required=false %}
+{% swagger-parameter name="param2" type="object" in="path" %}
 description
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="param1" type="string" required=true %}
+{% swagger-parameter name="param1" type="string" in="path" %}
 description
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="header1" type="string" required=false %}
+{% swagger-parameter name="header1" type="string" in="header" %}
 description
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="param1" type="array" required=false %}
+{% swagger-parameter name="param1" type="array" in="query" %}
 description
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-form-data-parameters %}
-{% api-method-parameter name="param1" type="number" required=true %}
+{% swagger-parameter name="param1" type="number" in="body" %}
 description
-{% endapi-method-parameter %}
-{% endapi-method-form-data-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="param1" type="boolean" required=false %}
+{% swagger-parameter name="param1" type="boolean" in="body" %}
 description
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Response description
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 response 1
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=302 %}
-{% api-method-response-example-description %}
-Response description
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="302" description="" %}
+```
 response 2
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}
