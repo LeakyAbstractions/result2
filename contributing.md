@@ -10,7 +10,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 Think you found a bug? Please check the [list of open issues](https://github.com/leakyabstractions/result/issues) to see if your bug has already been reported. If it hasn't please [submit a new issue](https://github.com/leakyabstractions/result/issues/new).
 
-Here are a few tips for writing _great_ bug reports:
+Here are a few tips for writing *great* bug reports:
 
 * Describe the specific problem.
 * Include the steps to reproduce the bug, what you expected to happen, and what happened instead.
@@ -31,17 +31,14 @@ Feature requests are welcome. But take a moment to find out whether your idea fi
 
 We'd love for you to contribute to this project. Unsure where to begin contributing to the library? You can start by looking through [currently open issues](https://github.com/leakyabstractions/result/issues?q=is%3Aissue+is%3Aopen).
 
-Feel free to ask for help; everyone is a beginner at first :smiley\_cat:
+Feel free to ask for help; everyone is a beginner at first :)
 
 ## How to Propose Changes
 
 Here's a few general guidelines for proposing changes:
 
 * Please be sure to update the documentation.
-* Each pull request should implement **one** feature or bug fix. If you want to add or fix more than one thing, submit
-
-  more than one pull request.
-
+* Each pull request should implement **one** feature or bug fix. If you want to add or fix more than one thing, submit more than one pull request.
 * Don't commit changes to files that are irrelevant to your feature or bug fix.
 * Don't bump the version number in your pull request \(it will be bumped prior to release\).
 * Write [a good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
@@ -57,23 +54,23 @@ At a high level, the [process for proposing changes](https://guides.github.com/i
 7. Push to your fork and [submit a pull request](https://github.com/leakyabstractions/result/compare).
 8. Pat your self on the back and wait for your pull request to be reviewed and merged.
 
-**Interesting in submitting your first Pull Request?** It's easy! You can learn how from this _free_ series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
+**Interesting in submitting your first Pull Request?** It's easy! You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
 
 ## Formatting the Source Code
 
-```text
+```shell
 $ ./gradlew spotlessApply
 ```
 
 ## Running the Tests
 
-```text
+```shell
 $ ./gradlew test
 ```
 
 ## Checking Code Coverage
 
-```text
+```shell
 $ ./gradlew jacocoTestReport jacocoTestCoverageVerification
 ```
 
