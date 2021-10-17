@@ -1,4 +1,4 @@
-# 📥 Creating Result Objects
+# Creating Result Objects
 
 There are several ways of creating `Result` objects.
 

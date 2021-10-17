@@ -2,7 +2,7 @@
 description: 🔀 Handling success and failure
 ---
 
-# 🔀 Conditional Actions
+# Conditional Actions
 
 The `if...` family of methods enables us to run some code on the wrapped success/failure value.
 

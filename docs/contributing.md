@@ -35,19 +35,18 @@ Feature requests are welcome. But take a moment to find out whether your idea fi
 
 We'd love for you to contribute to this project. Unsure where to begin contributing to the library? You can start by looking through [currently open issues](https://github.com/leakyabstractions/result/issues?q=is%3Aissue+is%3Aopen).
 
-Feel free to ask for help; everyone is a beginner at first :smiley\_cat:
+Feel free to ask for help; everyone is a beginner at first :smiley_cat:
 
 ## How to Propose Changes
 
 Here's a few general guidelines for proposing changes:
 
 * Please be sure to update the documentation.
-* Each pull request should implement **one** feature or bug fix. If you want to add or fix more than one thing, submit
+*   Each pull request should implement **one** feature or bug fix. If you want to add or fix more than one thing, submit
 
-  more than one pull request.
-
+    more than one pull request.
 * Don't commit changes to files that are irrelevant to your feature or bug fix.
-* Don't bump the version number in your pull request \(it will be bumped prior to release\).
+* Don't bump the version number in your pull request (it will be bumped prior to release).
 * Write [a good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 
 At a high level, the [process for proposing changes](https://guides.github.com/introduction/flow/) is:
@@ -65,23 +64,18 @@ At a high level, the [process for proposing changes](https://guides.github.com/i
 
 ## Formatting the Source Code
 
-```text
+```
 $ ./gradlew spotlessApply
 ```
 
 ## Running the Tests
 
-```text
+```
 $ ./gradlew test
 ```
 
 ## Checking Code Coverage
 
-```text
+```
 $ ./gradlew jacocoTestReport jacocoTestCoverageVerification
 ```
-
-## Code of Conduct
-
-This project is governed by the [Contributor Covenant Code of Conduct](code_of_conduct.md). By participating, you are expected to uphold this code.
-

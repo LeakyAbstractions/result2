@@ -2,7 +2,7 @@
 description: A Java library to handle success and failure without exceptions
 ---
 
-# 🎱 Result Library for Java
+# Result Library for Java
 
 ![Result](https://dev.leakyabstractions.com/result/result-banner-centered.png)
 

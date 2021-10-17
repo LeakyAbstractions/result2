@@ -1,4 +1,4 @@
-# 📤 Unwrapping Values
+# Unwrapping Values
 
 The [`Optional::orElse`](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Optional.html#orElse\(T) method is used to retrieve the value wrapped inside an `Optional` instance, or a _default value_ in case the `Optional` is empty.
 

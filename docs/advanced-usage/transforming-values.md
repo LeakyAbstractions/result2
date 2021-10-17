@@ -1,4 +1,4 @@
-# 🧩 Transforming Values
+# Transforming Values
 
 In the previous section, we looked at how to reject or accept a success value based on a filter.
 
