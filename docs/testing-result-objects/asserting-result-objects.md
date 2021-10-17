@@ -1,59 +1,4 @@
-# Index
-
-***
-
-title: Result Library for Java\
-description: A Java library to handle success and failure without exceptions
-
-### image: /result-banner-centered.png <a href="image-result-banner-centered-png" id="image-result-banner-centered-png"></a>
-
-## Result Library for Java <a href="result-library-for-java" id="result-library-for-java"></a>
-
-The purpose of this library is to provide a type-safe encapsulation of operation results that may have succeeded or\
-failed, instead of throwing exceptions.
-
-If you like Optional but feel that it sometimes falls too short, you'll love Result.
-
-The best way to think of Result is as a super-powered version of Optional. The only difference is that\
-whereas Optional may contain a successful value or express the absence of a value, Result contains\
-either a successful value or a failure value that explains what went wrong.
-
-\
-`Result` objects have methods equivalent to those in\
-`Optional`, plus a few more to handle failure values.\
-\
-\
-\| Optional | Result |\
-\|-------------------------|-------------------------|\
-\| `isPresent` | `isSuccess` |\
-\| `isEmpty` | `isFailure` |\
-\| `get` | |\
-\| `orElse` | `orElse` |\
-\| `orElseGet` | `orElseMap` |\
-\| `orElseThrow` | |\
-\| | `optional` |\
-\| | `optionalFailure` |\
-\| `stream` | `stream` |\
-\| | `streamFailure` |\
-\| `ifPresent` | `ifSuccess` |\
-\| | `ifFailure` |\
-\| `ifPresentOrElse` | `ifSuccessOrElse` |\
-\| `filter` | `filter` |\
-\| `map` | `mapSuccess` |\
-\| | `mapFailure` |\
-\| | `map` |\
-\| `flatMap` | `flatMapSuccess` |\
-\| `or` | `flatMapFailure` |\
-\| | `flatMap` |\
-\
-\
-
-
-***
-
-
-
-### Asserting Result objects <a href="creating-result-objects" id="creating-result-objects"></a>
+# ✅ Asserting Result objects
 
 You can use fluent assertions (based on [AssertJ](https://assertj.github.io)) for Result objects in your unit tests.
 
@@ -63,7 +8,7 @@ To add a dependency on Result assertions using **Maven**, use the following:
 <dependency>
     <groupId>com.leakyabstractions</groupId>
     <artifactId>result-assertj</artifactId>
-    <version>{{ site.current_version }}</version>
+    <version>1.0.0.0</version>
     <scope>test</scope>
 </dependency>
 ```
@@ -76,7 +21,7 @@ dependencies {
 }
 ```
 
-This allows you to use Result assertions in your tests via assertThat:
+This allows you to use Result assertions in your tests via `assertThat`:
 
 ```java
 import static com.leakyabstractions.result.assertj.ResultAssertions.assertThat;
@@ -93,8 +38,7 @@ public void should_pass() {
 }
 ```
 
-If, for some reason, you cannot statically import static method ResultAssertions.assertThat you can use static\
-method ResultAssert.assertThatResult instead:
+If, for some reason, you cannot statically import static method `ResultAssertions.assertThat `you can use static method `ResultAssert.assertThatResult` instead:
 
 ```java
 import static com.leakyabstractions.result.assertj.ResultAssert.assertThatResult;

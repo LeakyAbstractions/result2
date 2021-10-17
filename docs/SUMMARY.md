@@ -2,7 +2,7 @@
 
 * [🎱 Result Library for Java](README.md)
 * [Example](example.md)
-* [Index](index.md)
+* [com.leakyabstractions.result](com.leakyabstractions.result.md)
 
 ## Getting Started
 
@@ -20,15 +20,19 @@
 * [🧩 Transforming Values](advanced-usage/transforming-values.md)
 * [😴 Lazy Results](advanced-usage/lazy-results.md)
 
+## Testing Result Objects
+
+* [✅ Asserting Result objects](testing-result-objects/asserting-result-objects.md)
+
 ***
 
-* [Page 1](page-1.md)
-* [Page 2](page-2/README.md)
-  * [Page 3](page-2/page-3.md)
 * [Where to Get Help](support.md)
+* [Where to Get Help](where-to-get-help.md)
 * [How to Contribute](contributing.md)
+* [How to Contribute](how-to-contribute.md)
 * [Code of Conduct](code_of_conduct.md)
+* [Contributor Covenant Code of Conduct](contributor-covenant-code-of-conduct.md)
 * [License](license.md)
 * [Author](author.md)
 * [Releases](releases.md)
-* [Page 1](page-1-1.md)
+* [Result Library for Java](result-library-for-java.md)
