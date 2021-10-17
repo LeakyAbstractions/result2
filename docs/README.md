@@ -2,7 +2,7 @@
 description: A Java library to handle success and failure without exceptions
 ---
 
-# Result Library for Java
+# 🎱 Result Library for Java
 
 ![Result](https://dev.leakyabstractions.com/result/result-banner-centered.png)
 
@@ -14,34 +14,34 @@ The best way to think of _Result_ is as a super-powered version of _Optional_. T
 
 {% tabs %}
 {% tab title="Result vs Optional" %}
- `Result` objects have methods equivalent to those in `Optional`, plus a few more to handle failure values.
+`Result` objects have methods equivalent to those in `Optional`, plus a few more to handle failure values.
 {% endtab %}
 
 {% tab title="Methods" %}
-| Optional | Result |
-| :--- | :--- |
-| `isPresent` | `isSuccess` |
-| `isEmpty` | `isFailure` |
-| `get` |  |
-| `orElse` | `orElse` |
-| `orElseGet` | `orElseMap` |
-| `orElseThrow` | `orElseThrow` |
+| Optional                | Result                  |
+| ----------------------- | ----------------------- |
+| `isPresent`             | `isSuccess`             |
+| `isEmpty`               | `isFailure`             |
+| `get`                   |                         |
+| `orElse`                | `orElse`                |
+| `orElseGet`             | `orElseMap`             |
+| `orElseThrow`           | `orElseThrow`           |
 | `orElseThrow(Supplier)` | `orElseThrow(Function)` |
-|  | `getFailureOrElseThrow` |
-|  | `optional` |
-|  | `optionalFailure` |
-| `stream` | `stream` |
-|  | `streamFailure` |
-| `ifPresent` | `ifSuccess` |
-|  | `ifFailure` |
-| `ifPresentOrElse` | `ifSuccessOrElse` |
-| `filter` | `filter` |
-| `map` | `mapSuccess` |
-|  | `mapFailure` |
-|  | `map` |
-| `flatMap` | `flatMapSuccess` |
-| `or` | `flatMapFailure` |
-|  | `flatMap` |
+|                         | `getFailureOrElseThrow` |
+|                         | `optional`              |
+|                         | `optionalFailure`       |
+| `stream`                | `stream`                |
+|                         | `streamFailure`         |
+| `ifPresent`             | `ifSuccess`             |
+|                         | `ifFailure`             |
+| `ifPresentOrElse`       | `ifSuccessOrElse`       |
+| `filter`                | `filter`                |
+| `map`                   | `mapSuccess`            |
+|                         | `mapFailure`            |
+|                         | `map`                   |
+| `flatMap`               | `flatMapSuccess`        |
+| `or`                    | `flatMapFailure`        |
+|                         | `flatMap`               |
 {% endtab %}
 {% endtabs %}
 
@@ -94,6 +94,3 @@ public Result<Integer, SomeFailure> getFoobarLength() {
 ```
 
 This allows others to easily compose operations on top of ours, just like we did with `foobar`.
-
-
-

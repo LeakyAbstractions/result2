@@ -112,12 +112,6 @@ public void should_pass_too() {
 }
 ```
 
-### Releases <a href="releases" id="releases"></a>
-
-This library adheres to [Pragmatic Versioning](https://pragver.github.io).
-
-Artifacts are available in [Maven Central](https://search.maven.org/artifact/com.leakyabstractions/result).
-
 ### Javadoc <a href="javadoc" id="javadoc"></a>
 
 Here's the full\

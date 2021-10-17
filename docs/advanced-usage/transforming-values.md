@@ -2,7 +2,9 @@
 
 In the previous section, we looked at how to reject or accept a success value based on a filter.
 
-We can also transform success/failure values held by Result objects with the map... family of methods:
+### Mapping Success/Failure Values
+
+We can also transform success/failure values held by Result objects with the `map...` family of methods:
 
 ```java
 @Test
@@ -16,12 +18,9 @@ void should_return_string_length() {
 }
 ```
 
-In this example, we wrap a String inside a Result object and use its \[`mapSuccess()`]\[MAP_SUCCESS]\
-method to manipulate it (here we calculate its length). Note that we can specify the action as a method reference, or a\
-lambda. In any case, the result of this action gets wrapped inside a new Result object. And then we call the\
-appropriate method on the returned result to retrieve its value.
+In this example, we wrap a String inside a Result object and use its `mapSuccess()` method to manipulate it (here we calculate its length). Note that we can specify the action as a method reference, or a lambda. In any case, the result of this action gets wrapped inside a new Result object. And then we call the appropriate method on the returned result to retrieve its value.
 
-There is another \[`map()`]\[MAP] method to transform either success/failure value at once:
+There is another `map()` method to transform either success/failure value at once:
 
 ```java
 @Test
@@ -47,7 +46,7 @@ void should_return_lower_case() {
 }
 ```
 
-And the \[`mapFailure()`]\[MAP_FAILURE] method allows us to transform failure values only:
+And the `mapFailure()` method allows us to transform failure values only:
 
 ```java
 @Test
@@ -61,18 +60,14 @@ void should_return_is_empty() {
 }
 ```
 
-Just like the map... methods, we also have the flatMap... family of methods as an alternative for\
-transforming values. The difference is that map... methods don't alter the success/failure state of the result,\
-whereas with flatMap... ones, you can start with a successful result and end up with a failed one, and _vice_\
-_versa_.
+### Flat-Mapping Result Objects
 
-Previously, we created simple String and Integer objects for wrapping in a Result instance.\
+Just like the `map...` methods, we also have the `flatMap...` family of methods as an alternative for transforming values. The difference is that `map...` methods don't alter the success/failure state of the result, whereas with `flatMap...` ones, you can start with a successful result and end up with a failed one, and _vice versa_.
+
+Previously, we created simple `String` and `Integer` objects for wrapping in a `Result` instance.\
 However, frequently, we will receive these objects as we invoke third-party methods.
 
-To get a clearer picture of the difference, let's have a look at a User object that takes a name and a\
-boolean flag that determines if the user has custom configuration. It also has a method getCustomConfigPath\
-which returns a Result containing either the path to the user configuration file, or a Problem object\
-describing why the path cannot be obtained:
+To get a clearer picture of the difference, let's have a look at a `User` object that takes a name and a boolean flag that determines if the user has custom configuration. It also has a method `getCustomConfigPath` which returns a `Result` containing either the path to the user configuration file, or a `Problem` object describing why the path cannot be obtained:
 
 ```java
 class User {
@@ -94,8 +89,7 @@ class User {
 }
 ```
 
-Now suppose we have a method openFile which checks if a given file exists and returns a result containing the\
-file object or a Problem object explaining why the file cannot be retrieved:
+Now suppose we have a method `openFile` which checks if a given file exists and returns a result containing the file object or a `Problem` object explaining why the file cannot be retrieved:
 
 ```java
 Result<File, Problem> openFile(String path) {
@@ -104,8 +98,7 @@ Result<File, Problem> openFile(String path) {
 }
 ```
 
-If we wanted to obtain the file path from the user _and then_ invoke the above method to get the file object, we could\
-use \[`flatMapSuccess()`]\[FLATMAP_SUCCESS] to fluently transform one result into another:
+If we wanted to obtain the file path from the user _and then_ invoke the above method to get the file object, we could use `flatMapSuccess()` to fluently transform one result into another:
 
 ```java
 @Test
@@ -142,7 +135,7 @@ void should_contain_file_problem() {
 }
 ```
 
-There is another \[`flatMap()`]\[FLATMAP] method to transform either success/failure values at once:
+There is another `flatMap()` method to transform either success/failure values at once:
 
 ```java
 @Test
@@ -157,7 +150,7 @@ void should_contain_123() {
 }
 ```
 
-And the \[`flatMapFailure()`]\[FLATMAP_FAILURE] method allows us to transform failure values only:
+And the `flatMapFailure()` method allows us to transform failure values only:
 
 ```java
 @Test

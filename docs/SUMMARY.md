@@ -18,13 +18,17 @@
 
 * [🗑 Filtering Success Values](advanced-usage/filtering-success-values.md)
 * [🧩 Transforming Values](advanced-usage/transforming-values.md)
+* [😴 Lazy Results](advanced-usage/lazy-results.md)
 
 ***
 
+* [Page 1](page-1.md)
+* [Page 2](page-2/README.md)
+  * [Page 3](page-2/page-3.md)
 * [Where to Get Help](support.md)
 * [How to Contribute](contributing.md)
 * [Code of Conduct](code_of_conduct.md)
 * [License](license.md)
 * [Author](author.md)
 * [Releases](releases.md)
-* [Page 1](page-1.md)
+* [Page 1](page-1-1.md)
