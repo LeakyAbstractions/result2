@@ -37,14 +37,12 @@ The above example is not only shorter but also faster. We can make it even short
 foobar().ifSuccessOrElse(this::commit, this::rollback);
 ```
 
-{% hint style="info" %}
 There are other methods `ifSuccess()` and `ifFailure()` to handle either one of the success/failure cases only:
 
 ```java
 foobar()
-    .ifSuccess(this::commit) // commits only if the result is success
+    .ifSuccess(this::commit)    // commits only if the result is success
     .ifFailure(this::rollback); // rolls back only if the result is failure
 ```
-{% endhint %}
 
 ###  <a href="unwrapping-values" id="unwrapping-values"></a>
