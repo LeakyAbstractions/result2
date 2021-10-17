@@ -1,23 +1,23 @@
 # Table of contents
 
-* [Result Library for Java](README.md)
+* [🎱 Result Library for Java](README.md)
 * [Example](example.md)
 * [Index](index.md)
 
 ## Getting Started
 
-* [Adding Result to Your Build](getting-started/adding-result-to-your-build.md)
-* [Creating Result Objects](getting-started/creating-result-objects.md)
+* [🛠 Adding Result to Your Build](getting-started/adding-result-to-your-build.md)
+* [📥 Creating Result Objects](getting-started/creating-result-objects.md)
 
 ## Basic Usage
 
-* [Conditional Actions](basic-usage/conditional-actions.md)
-* [Unwrapping Values](basic-usage/unwrapping-values.md)
+* [🔀 Conditional Actions](basic-usage/conditional-actions.md)
+* [📤 Unwrapping Values](basic-usage/unwrapping-values.md)
 
 ## Advanced Usage
 
-* [Filtering Success Values](advanced-usage/filtering-success-values.md)
-* [Transforming Values](advanced-usage/transforming-values.md)
+* [🗑 Filtering Success Values](advanced-usage/filtering-success-values.md)
+* [🧩 Transforming Values](advanced-usage/transforming-values.md)
 
 ***
 
