@@ -2,7 +2,7 @@
 
 The [`Optional::orElse`](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Optional.html#orElse\(T) method is used to retrieve the value wrapped inside an `Optional` instance, or a _default value_ in case the `Optional` is empty.
 
-### Success Value
+### Default Success Value
 
 Similarly, you can use `orElse()` to obtain the success value held by a `Result` object; or a _default success value_ in case the result is failed.
 
@@ -28,6 +28,8 @@ void should_return_the_default_value() {
 }
 ```
 
+### Alternative Success Value
+
 The `orElseMap()` method is similar to `orElse()`. However, instead of taking a value to return if\
 the `Result` object is failed, it takes a mapping function, which would be applied to the failure value to produce an alternative success value:
 
@@ -42,6 +44,8 @@ void should_map_the_failure_value() {
     assertThat(text).isEqualTo("HOWDY");
 }
 ```
+
+### Optional Success/Failure Value
 
 Finally, the methods `optional()` and `optionalFailure()` can be used to wrap success/failure values held by a `Result` object in an `Optional` object.
 

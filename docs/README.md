@@ -10,7 +10,7 @@ The purpose of this library is to provide a type-safe encapsulation of operation
 
 If you like `Optional` but feel that it sometimes falls too short, you'll love `Result`.
 
-The best way to think of _Result_ is as a super-powered version of _Optional_. The only difference is that whereas _Optional_ may contain a successful value or express the absence of a value, _Result_ contains either a successful value or a failure value that explains what went wrong.
+The best way to think of `Result` is as a super-powered version of `Optional`. The only difference is that whereas `Optional` may contain a successful value or express the absence of a value, `Result` contains either a successful value or a failure value that explains what went wrong.
 
 {% tabs %}
 {% tab title="Result vs Optional" %}
@@ -18,36 +18,34 @@ The best way to think of _Result_ is as a super-powered version of _Optional_. T
 {% endtab %}
 
 {% tab title="Methods" %}
-| Optional                | Result                  |
-| ----------------------- | ----------------------- |
-| `isPresent`             | `isSuccess`             |
-| `isEmpty`               | `isFailure`             |
-| `get`                   |                         |
-| `orElse`                | `orElse`                |
-| `orElseGet`             | `orElseMap`             |
-| `orElseThrow`           | `orElseThrow`           |
-| `orElseThrow(Supplier)` | `orElseThrow(Function)` |
-|                         | `getFailureOrElseThrow` |
-|                         | `optional`              |
-|                         | `optionalFailure`       |
-| `stream`                | `stream`                |
-|                         | `streamFailure`         |
-| `ifPresent`             | `ifSuccess`             |
-|                         | `ifFailure`             |
-| `ifPresentOrElse`       | `ifSuccessOrElse`       |
-| `filter`                | `filter`                |
-| `map`                   | `mapSuccess`            |
-|                         | `mapFailure`            |
-|                         | `map`                   |
-| `flatMap`               | `flatMapSuccess`        |
-| `or`                    | `flatMapFailure`        |
-|                         | `flatMap`               |
+| Optional          | Result            |
+| ----------------- | ----------------- |
+| `isPresent`       | `isSuccess`       |
+| `isEmpty`         | `isFailure`       |
+| `get`             |                   |
+| `orElse`          | `orElse`          |
+| `orElseGet`       | `orElseMap`       |
+| `orElseThrow`     |                   |
+|                   | `optional`        |
+|                   | `optionalFailure` |
+| `stream`          | `stream`          |
+|                   | `streamFailure`   |
+| `ifPresent`       | `ifSuccess`       |
+|                   | `ifFailure`       |
+| `ifPresentOrElse` | `ifSuccessOrElse` |
+| `filter`          | `filter`          |
+| `map`             | `mapSuccess`      |
+|                   | `mapFailure`      |
+|                   | `map`             |
+| `flatMap`         | `flatMapSuccess`  |
+| `or`              | `flatMapFailure`  |
+|                   | `flatMap`         |
 {% endtab %}
 {% endtabs %}
 
 ### Result Library in a Nutshell
 
-Before _Result_, we would wrap exception-throwing `foobar` method invocation inside a `try` block so that errors can be handled inside a `catch` block.
+Before `Result`, we would wrap exception-throwing `foobar` method invocation inside a `try` block so that errors can be handled inside a `catch` block.
 
 ```java
 public int getFoobarLength() {
@@ -64,9 +62,9 @@ public int getFoobarLength() {
 }
 ```
 
-This approach is lengthy, and that's not the only problem -- it's also slow. Conventional wisdom says that exceptional logic shouldn't be used for normal program flow. _Result_ makes us deal with expected, non-exceptional error situations explicitly as a way of enforcing good programming practices.
+This approach is lengthy, and that's not the only problem -- it's also slow. Conventional wisdom says that exceptional logic shouldn't be used for normal program flow. `Result` makes us deal with expected, non-exceptional error situations explicitly as a way of enforcing good programming practices.
 
-Let's now look at how the above code could be refactored if method `foobar` returned a _Result_ object instead of throwing an exception:
+Let's now look at how the above code could be refactored if method `foobar` returned a `Result` object instead of throwing an exception:
 
 ```java
 public int getFoobarLength() {
@@ -85,7 +83,7 @@ public int getFoobarLength() {
 }
 ```
 
-In fact, since we are using `-1` here just to signal that the underlying operation failed, we'd be better off returning a _Result_ object upstream:
+In fact, since we are using `-1` here just to signal that the underlying operation failed, we'd be better off returning a `Result` object upstream:
 
 ```java
 public Result<Integer, SomeFailure> getFoobarLength() {

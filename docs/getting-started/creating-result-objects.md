@@ -1,4 +1,8 @@
-# Creating Result Objects
+---
+description: Creating Result Objects
+---
+
+# Instantiating Result
 
 There are several ways of creating `Result` objects.
 

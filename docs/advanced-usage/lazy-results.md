@@ -1,3 +1,7 @@
+---
+description: Deferring expensive calculation of Results
+---
+
 # Lazy Results
 
 There's also a way to encapsulate expensive operations that can be entirely omitted (as an optimization) if there's no actual need to examine the result. To create a _lazy_ result we need to use static method `Results.lazy()`:

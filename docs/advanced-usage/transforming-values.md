@@ -1,8 +1,12 @@
+---
+description: Transform wrapped value to some other value
+---
+
 # Transforming Values
 
 In the previous section, we looked at how to reject or accept a success value based on a filter.
 
-### Mapping Success/Failure Values
+### Mapping Success Values
 
 We can also transform success/failure values held by Result objects with the `map...` family of methods:
 
@@ -18,9 +22,27 @@ void should_return_string_length() {
 }
 ```
 
-In this example, we wrap a String inside a Result object and use its `mapSuccess()` method to manipulate it (here we calculate its length). Note that we can specify the action as a method reference, or a lambda. In any case, the result of this action gets wrapped inside a new Result object. And then we call the appropriate method on the returned result to retrieve its value.
+In this example, we wrap a `String` inside a `Result` object and use its `mapSuccess()` method to manipulate it (here we calculate its length). Note that we can specify the action as a method reference, or a lambda. In any case, the result of this action gets wrapped inside a new `Result` object. And then we call the appropriate method on the returned result to retrieve its value.
 
-There is another `map()` method to transform either success/failure value at once:
+### Mapping Failure Values
+
+There is another `mapFailure()` method to transform either failure values only:
+
+```java
+@Test
+void should_return_is_empty() {
+    // Given
+    final Result<Integer, String> result = failure("");
+    // When
+    final Result<Integer, Boolean> mapped = result.mapFailure(String::isEmpty);
+    // Then
+    assertThat(mapped.optionalFailure().orElse(false)).isTrue();
+}
+```
+
+### Mapping Success/Failure Values
+
+And the method `map()` allows us to transform either success/failure value at once:
 
 ```java
 @Test
@@ -43,20 +65,6 @@ void should_return_lower_case() {
         .map(String::toUpperCase, String::toLowerCase);
     // Then
     assertThat(mapped.optionalFailure()).contains("hello world!");
-}
-```
-
-And the `mapFailure()` method allows us to transform failure values only:
-
-```java
-@Test
-void should_return_is_empty() {
-    // Given
-    final Result<Integer, String> result = failure("");
-    // When
-    final Result<Integer, Boolean> mapped = result.mapFailure(String::isEmpty);
-    // Then
-    assertThat(mapped.optionalFailure().orElse(false)).isTrue();
 }
 ```
 

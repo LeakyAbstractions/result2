@@ -1,8 +1,8 @@
 ---
-description: Rejecting wrapped success values based on a predefined rule
+description: Rejecting success values based on a predefined rule
 ---
 
-# Filtering Success Values
+# Filtering Values
 
 We can run an inline test on our wrapped success value with the `filter()` method. It takes a predicate and a mapping function as arguments and returns a `Result` object:
 
@@ -21,4 +21,3 @@ void should_pass_test() {
     assertThat(filtered.isFailure()).isTrue();
 }
 ```
-

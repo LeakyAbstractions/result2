@@ -1,5 +1,5 @@
 ---
-description: 🔀 Handling success and failure
+description: Handling success and failure
 ---
 
 # Conditional Actions

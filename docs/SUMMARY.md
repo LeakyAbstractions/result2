@@ -1,12 +1,11 @@
 # Table of contents
 
 * [Result Library for Java](README.md)
-  * [Package Info](readme/package-info.md)
 
 ## Getting Started
 
 * [Adding Result to Your Build](getting-started/adding-result-to-your-build.md)
-* [Creating Result Objects](getting-started/creating-result-objects.md)
+* [Instantiating Result](getting-started/creating-result-objects.md)
 
 ## Basic Usage
 
@@ -15,7 +14,7 @@
 
 ## Advanced Usage
 
-* [Filtering Success Values](advanced-usage/filtering-success-values.md)
+* [Filtering Values](advanced-usage/filtering-success-values.md)
 * [Transforming Values](advanced-usage/transforming-values.md)
 * [Lazy Results](advanced-usage/lazy-results.md)
 
